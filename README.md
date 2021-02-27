@@ -1,3 +1,3 @@
-# Varnam CodeGroup
+# Vernam CodeGroup
 
-An implementation of the Varnam Cipher.  This implementation also provides an encoder/decoder for text-based transfers.
+An implementation of the Vernam Cipher.  This implementation also provides an encoder/decoder for text-based transfers.
