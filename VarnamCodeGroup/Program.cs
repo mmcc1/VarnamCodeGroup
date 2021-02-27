@@ -13,13 +13,13 @@ namespace VarnamCodeGroup
             byte[] bytesToBeEncrypted = Encoding.ASCII.GetBytes(textToBeEncrypted);
             byte[] key = Helpers.GenerateRandomBytes(bytesToBeEncrypted.Length);
 
-            byte[] cipherText = Vernam.Encrypt(bytesToBeEncrypted, key);
+            byte[] cipherText = Vernam.Encrypt(bytesToBeEncrypted, key);  //Encrypt
 
-            string codedFile = CodeGroup.ConvertToCode(cipherText);
-            byte[] decodefile = CodeGroup.ConvertFromCode(codedFile);
+            string codedCipherText = CodeGroup.ConvertToCode(cipherText); //Encode
+            byte[] decodedCipherText = CodeGroup.ConvertFromCode(codedCipherText);  //Decode
 
-
-            string textDeciphered = Encoding.ASCII.GetString(Vernam.Decrypt(decodefile, key));
+            byte[] decipheredFile = Vernam.Decrypt(decodedCipherText, key); //Decrypt
+            string textDeciphered = Encoding.ASCII.GetString(decipheredFile);
 
             Console.WriteLine(textDeciphered);
         }
