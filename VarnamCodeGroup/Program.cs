@@ -18,10 +18,12 @@ namespace VarnamCodeGroup
             string codedCipherText = CodeGroup.ConvertToCode(cipherText); //Encode
             byte[] decodedCipherText = CodeGroup.ConvertFromCode(codedCipherText);  //Decode
 
-            byte[] decipheredFile = Vernam.Decrypt(decodedCipherText, key); //Decrypt
-            string textDeciphered = Encoding.ASCII.GetString(decipheredFile);
+            byte[] decipheredText = Vernam.Decrypt(decodedCipherText, key); //Decrypt
+            string textThatWasEncrypted = Encoding.ASCII.GetString(decipheredText);
 
-            Console.WriteLine(textDeciphered);
+            Console.WriteLine(textThatWasEncrypted);
+
+            Console.ReadLine();
         }
     }
 }
