@@ -24,7 +24,7 @@ namespace LibCodeGroup
 
         public static string[] GenerateLookup()
         {
-            lookup = Generate.CodeGroup5Lookup();
+            lookup = Generate.CodeGroup2Lookup();
             return lookup;
         }
 
