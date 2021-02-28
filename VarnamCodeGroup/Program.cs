@@ -15,10 +15,10 @@ namespace VernamCodeGroup
 
             byte[] cipherText = Vernam.Encrypt(bytesToBeEncrypted, key);  //Encrypt
 
-            string[] lookup = CodeGroup.GenerateLookup();  //Create a random lookup table for the encoder
+            string[] lookup = CodeGroup5.GenerateLookup();  //Create a random lookup table for the encoder
 
-            string codedCipherText = CodeGroup.ConvertToCode(cipherText); //Encode
-            byte[] decodedCipherText = CodeGroup.ConvertFromCode(codedCipherText);  //Decode
+            string codedCipherText = CodeGroup5.ConvertToCode(cipherText); //Encode
+            byte[] decodedCipherText = CodeGroup5.ConvertFromCode(codedCipherText);  //Decode
 
             byte[] decipheredText = Vernam.Decrypt(decodedCipherText, key); //Decrypt
             string textThatWasEncrypted = Encoding.ASCII.GetString(decipheredText);
