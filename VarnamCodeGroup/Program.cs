@@ -3,7 +3,7 @@ using LibVernam;
 using System;
 using System.Text;
 
-namespace VarnamCodeGroup
+namespace VernamCodeGroup
 {
     class Program
     {
