@@ -15,6 +15,8 @@ namespace VernamCodeGroup
 
             byte[] cipherText = Vernam.Encrypt(bytesToBeEncrypted, key);  //Encrypt
 
+            string[] lookup = CodeGroup.GenerateLookup();  //Create a random lookup table for the encoder
+
             string codedCipherText = CodeGroup.ConvertToCode(cipherText); //Encode
             byte[] decodedCipherText = CodeGroup.ConvertFromCode(codedCipherText);  //Decode
 

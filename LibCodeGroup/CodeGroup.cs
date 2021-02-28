@@ -22,6 +22,12 @@ namespace LibCodeGroup
             "JA", "JB", "JC", "JD", "JE", "JF", "JG", "JH", "JI", "JJ", "JK", "JL", "JM", "JN", "JO", "JP", "JQ", "JR", "JS", "JT", "JU", "JV"
         };
 
+        public static string[] GenerateLookup()
+        {
+            lookup = Generate.CodeGroup5Lookup();
+            return lookup;
+        }
+
         public static string ConvertToCode(byte[] data)
         {
             StringBuilder sb = new StringBuilder();
